@@ -41,7 +41,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Alex','Arriagada','aarriagada@example.com','2024-11-15 20:54:41','2024-11-15 20:54:41'),(2,'Bella','Blanco','bblanco@gmail.cl','2024-11-15 20:54:41','2024-11-15 20:54:41'),(3,'Cristina','Cortez','ccortez@yahoo.arg.co','2024-11-15 20:54:41','2024-11-17 10:29:54');
+INSERT INTO `usuarios` VALUES (1,'Alex','Arriagada','aarriagada@example.com','2024-11-15 20:54:41','2024-11-15 20:54:41'),(2,'Bella','Blanco','bblanco@example.cl','2024-11-15 20:54:41','2024-11-15 20:54:41'),(3,'Cristina','Cortez','ccortez@example.co','2024-11-15 20:54:41','2024-11-17 10:29:54');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
