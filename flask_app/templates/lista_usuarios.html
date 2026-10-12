@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Todos los usuarios{% endblock %}
+{% block content %}
+<body class="font-[Montserrat] w-full min-h-screen">
+    <main class="min-h-screen container mx-auto">
+        <div class="title-header flex justify-between my-8">
+            <h1 class="font-bold text-3xl">Usuarios</h1>
+            <a href="/nuevo" class="text-blue-500 underline">Nuevo Usuario</a>
+        </div>
+        
+        <table class="table-auto w-full text-center bg-gray-200 border border-gray-500">
+            <tr class=" bg-sky-300">
+                <th class="p-2">Id</th>
+                <th>Nombre Completo</th>
+                <th>Email</th>
+                <th>Fecha Creación</th>
+                <th>Acciones</th>
+            </tr>
+            {% for u in lista_usuarios %}
+                <tr class="even:bg-white">
+                    <td class="p-2">{{ u.id }}</td>
+                    <td>{{ u.nombre }} {{ u.apellido}}</td>
+                    <td>{{ u.email }}</td>
+                    <td>{{ u.created_at }}</td>
+                    <td class="flex gap-4 justify-center align-center py-2">
+                        <a href="/usuarios/{{u.id}}" class="text-blue-500 hover:text-sky-700 font-semibold underline">Ver</a>
+                        <a href="/usuarios/editar/{{u.id}}" class="text-blue-500 hover:text-sky-700 font-semibold underline">Editar</a>
+                        <form action="/usuarios/borrar/{{u.id}}" method="post">
+                            <button class=" text-red-500 hover:text-rose-700 font-semibold underline" type="submit">Borrar</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </main>
+</body>
+{% endblock %}
