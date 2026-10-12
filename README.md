@@ -34,3 +34,7 @@ La clase `default_model` se escribió en conjunto durante las clases del bootcam
 8. Abre http://127.0.0.1:5000 en el navegador.
 
 > **NOTA:** el script del paso 4 ejecuta `DROP TABLE IF EXISTS usuarios`. Si ya tienes una base llamada `esquema_usuarios`, perderás esa tabla.
+
+## Licencia
+Este proyecto usa licencia [MIT](https://opensource.org/license/mit) (véase [LICENSE](./LICENSE)).
+
